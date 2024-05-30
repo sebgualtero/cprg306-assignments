@@ -38,7 +38,7 @@ export default function NewItemPage() {
   };
 
   return (
-    <main>
+    <main className="">
       <div className="bg-blackPearl flex-col justify-center items-center m-5 w-96 ">
         <form className="p-5 w-60" onSubmit={handleSubmit}>
           <input
@@ -52,7 +52,7 @@ export default function NewItemPage() {
           />
           <div className="flex-row justify-around">
             <input
-              className="bg-blackPearl text-white"
+              className="bg-blackPearl text-white w-1/2"
               type="number"
               id="item_quantity"
               name="quantity"
@@ -62,6 +62,7 @@ export default function NewItemPage() {
               max={99}
             />
             <select
+              className="w-1/2 bg-white text-black"
               id="item_category"
               name="category"
               value={category}
@@ -80,10 +81,7 @@ export default function NewItemPage() {
               <option value="other">Other</option>
             </select>
           </div>
-          <button
-            type="submit"
-            className="bg-blue-600 hover:bg-indigo-500 text-white font-bold py-2 px-4 rounded-full"
-          >
+          <button className="bg-blue-500 text-white w-full p-2" type="submit">
             Add Item
           </button>
         </form>

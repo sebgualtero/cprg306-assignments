@@ -1,11 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <main>
       <div className="m-20">
-        <h1 className="text-2xl font-bold">
+        <h1 className="text-2xl font-bold align-middle">
           CPRG 306: Web Development 2 - Assignments
         </h1>
         <ul>
