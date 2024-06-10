@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <div className="m-20">
-        <h1 className="text-2xl font-bold align-middle">
+        <h1 className="text-2xl font-bold">
           CPRG 306: Web Development 2 - Assignments
         </h1>
         <ul>
@@ -16,6 +16,9 @@ export default function Home() {
           </li>
           <li>
             <Link href="./week-4">Week 4 Assignment</Link>
+          </li>
+          <li>
+            <Link href="./week-5">Week 5 Assignment</Link>
           </li>
         </ul>
       </div>
