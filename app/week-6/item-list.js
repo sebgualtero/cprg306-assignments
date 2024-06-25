@@ -25,7 +25,7 @@ export default function ItemList({ itemsList }) {
   }
 
   return (
-    <div>
+    <div className="bg-slate-800 m-5 w-96 p-2">
       <div>
         <label>Sort by: </label>
         <button
@@ -39,9 +39,6 @@ export default function ItemList({ itemsList }) {
           onClick={toggleSortCategory}
         >
           Category
-        </button>
-        <button className="bg-blue-300 text-white font-bold py-2 rounded p-3 hover:bg-indigo-500 items-center justify-center m-1 focus:bg-indigo-700">
-          Grouped by Category
         </button>
       </div>
       <div>
