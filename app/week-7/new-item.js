@@ -90,7 +90,7 @@ export default function NewItemPage({ onAddItem }) {
               className="bg-blue-500 text-white font-bold w-full  py-2 rounded hover:bg-indigo-500 items-center justify-center m-1"
               type="submit"
             >
-              Add Item
+              +
             </button>
           </div>
         </form>

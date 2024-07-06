@@ -1,9 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import IngredientList from "./ingredient-List";
 
 export default function MealIdeas({ ingredient }) {
   const [mealIdeas, setMealIdeas] = useState([]);
+  const [selectedMeal, setSelectedMeal] = useState(null);
+
+  const handleMealSelect = (meal) => {
+    let cleanedName = meal.idMeal;
+    setSelectedMeal(cleanedName);
+  };
 
   async function fetchMealIdeas() {
     try {
@@ -12,6 +19,7 @@ export default function MealIdeas({ ingredient }) {
       );
       const data = await response.json();
       setMealIdeas(data.meals);
+      setSelectedMeal(null);
     } catch (error) {
       console.log(`Error: $ ${error.message}`);
     }
@@ -34,12 +42,18 @@ export default function MealIdeas({ ingredient }) {
         {mealIdeas ? (
           mealIdeas.map((meal) => (
             <li
-              className="p-2 m-1 bg-slate-900 max-w-sm hover:bg-orange-800"
+              className="p-2 m-1 bg-slate-900 max-w-sm hover:bg-orange-800 cursor-pointer"
               key={meal.idMeal}
+              onClick={() => handleMealSelect(meal)}
             >
-              <a href={`https://www.themealdb.com/meal/${meal.idMeal}`}>
-                {meal.strMeal}
-              </a>
+              {meal.strMeal}
+              {selectedMeal == meal.idMeal ? (
+                <div className="text-xs text-gray-400 ml-2">
+                  <IngredientList mealId={selectedMeal} />
+                </div>
+              ) : (
+                <p></p>
+              )}
             </li>
           ))
         ) : (
