@@ -37,8 +37,8 @@ export default function IngredientList({ mealId }) {
   return (
     <ul>
       <p>Ingredients needed: </p>
-      {ingredients.map((ingredient) => (
-        <li>{ingredient}</li>
+      {ingredients.map((ingredient, index) => (
+        <li key={index}>{ingredient}</li>
       ))}
     </ul>
   );

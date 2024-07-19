@@ -6,6 +6,7 @@ import NewItemPage from "./new-item";
 import itemData from "./items.json";
 import MealIdeas from "./meal-ideas";
 import { useUserAuth } from "../_utils/auth-context";
+import Link from "next/link";
 
 export default function Page() {
   const { user } = useUserAuth();

@@ -44,7 +44,7 @@ export default function ItemList({ itemsList }) {
       <div>
         <ul>
           {itemArray.map((item) => (
-            <Item itemObj={item} />
+            <Item key={index} itemObj={item} />
           ))}
         </ul>
       </div>
