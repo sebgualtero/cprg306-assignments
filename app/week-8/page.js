@@ -27,13 +27,16 @@ export default function LoginPage() {
   return (
     <main>
       <header>
-        <h1>Shopping List App</h1>
+        <h1 className="text-4xl font-bold mb-5">Shopping List App</h1>
       </header>
       <section>
         {user ? (
-          <div>
+          <div className="text-lg">
             <p>Signed in as {user.email}</p>
-            <Link href="./week-8/shopping-list/">
+            <Link
+              href="./week-8/shopping-list/"
+              className="text-lg hover:underline"
+            >
               Continue to your Shopping List
             </Link>
             <br></br>
